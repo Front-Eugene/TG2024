@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    color: #fff;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background: #29ADE0;
+    color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+.shadow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000000a1;
+}
+
+h2 {
+    font-size: 50px;
+    text-shadow: 5px 5px 15px #29ADE0;
+}
+
+nav {
+    margin: 0;
+}
+
+section {
+    padding: 20px 0;
+    position: relative;
+    z-index: 90;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.first-word {
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #0000007d;
+    backdrop-filter: blur(5px);
+}
+
+.header-list {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.header-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-list li:hover {
+    text-shadow: 5px 5px 15px #29ADE0;
+}
+
+main {
+    padding: 0 100px;
+    background: url(bg.jpg) center center/cover no-repeat;
+    background-attachment: fixed;
+    z-index: 90;
+}
+
+.screen {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 150px 0 0 0;
+    text-align: center;
+    text-shadow: 5px 5px 15px #29ADE0;
+}
+
+.screen-title {
+    text-align: center;
+    display: block;
+    font-size: 50px;
+}
+
+.bird {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: birdAnimation 2s infinite;
+    cursor: pointer;
+}
+
+.bird:before,
+.bird:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 70px;
+    border-radius: 4px 4px 0 0;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom left;
+}
+
+.bird:before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.bird:after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+@keyframes birdAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.way-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.way-item {
+    width: 290px;
+    min-height: 200px;
+    padding: 10px 5px;
+    border: 2px solid #fff;
+    background: #000000b3;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.way-item h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.good {
+    color: #29ADE0;
+}
+
+.bad {
+    color: #ff0000;
+}
+
+.video-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video {
+    width: 45%;
+    height: 300px;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        display: none;
+    }
+
+    main { 
+        padding: 0 10px;
+    }
+
+    .screen-title {
+        font-size: 20px;
+    }
+
+    .bird {
+        left: 41%
+    }
+
+    .way-wrap {
+        justify-content: space-around;
+    }
+
+    .way-item {
+        margin: 20px 0;
+    }
+}
